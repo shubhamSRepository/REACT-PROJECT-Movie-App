@@ -5,9 +5,90 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(232, 229, 224);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.movie-card {
+  height: 35vh;
+  width: 50vw;
+  display: flex;
+  background-color: white;
+  margin: 1rem;
+}
+
+.poster {
+  height: 100%;
+  width: 30%;
+  /* background-color: orange; */
+}
+
+.poster img {
+  height: 100%;
+  width: 100%;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem;
+}
+
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+}
+
+.star-image {
+  height: 2.5rem;
+}
+
+.star-minus {
+  height: 1rem;
+}
+
+.star-plus {
+  height: 1rem;
+}
+
+.star-rating {
+  margin-left: 0.5rem;
+}
+
+
+.favourite-btn {
+  background-color: rgb(177, 107, 243);
+  color: white;
+  border-color: lightblue;
+}
+
+
+.un-favourite-btn {
+  background-color: rgb(230, 52, 123);
+  color: white;
+}
+
+.addToCart-btn {
+  background-color: rgb(43, 12, 126);
+  color: white;
+  border-color: lightblue;
+}
+
+.removeFromCart-btn {
+  background-color: rgb(210, 61, 61);
+  color: white;
 }
