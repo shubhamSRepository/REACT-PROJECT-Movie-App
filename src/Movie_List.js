@@ -95,7 +95,7 @@ class MovieList extends React.Component {
 
     handleIncStars = (movie) => {
 
-        const { movies, a } = this.state;
+        const { movies } = this.state;
 
         const movieId = movies.indexOf(movie);
 
@@ -115,12 +115,68 @@ class MovieList extends React.Component {
     }
 
 
+    handleDecStars = (movie) => {
+
+        const { movies } = this.state;
+
+        const movieId = movies.indexOf(movie);
+
+        if (movies[movieId].stars <= 0) {
+            return;
+        }
+
+
+        movies[movieId].stars -= 0.5;
+
+        this.setState({
+            // movies: movies  /* if key and value have same name we can use it only once and it will work fine */
+
+            movies
+        })
+
+    }
+
+
+    handleToggleFav = (movie) => {
+
+        const { movies } = this.state;
+
+        const movieId = movies.indexOf(movie);
+
+        movies[movieId].favBtn = !movies[movieId].favBtn;
+
+        this.setState({
+
+            movies
+        })
+    }
+
+
+    handleToggleCart = (movie) => {
+
+        const { movies } = this.state;
+
+        const movieId = movies.indexOf(movie);
+
+        movies[movieId].isInCart = !movies[movieId].isInCart;
+
+        this.setState({
+
+            movies
+        })
+    }
+
+
 
     render() {
         return (
             <div className="movie-list">
 
-                {this.state.movies.map((movie) => <MovieCard movie={movie} addStars={this.handleIncStars} />)}
+                {this.state.movies.map((movie) => <MovieCard movie={movie}
+                                                             addStars={this.handleIncStars}
+                                                             removeStars={this.handleDecStars} 
+                                                             toggleFav={this.handleToggleFav}
+                                                             toggleCart={this.handleToggleCart} />)}
 
 
             </div>
