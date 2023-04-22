@@ -1,8 +1,3 @@
-/** AFTER 'CREATE A SINGLE MOVIE CARD' COMMIT WE HAVE CREATED A 'Movie_List' FILE IN WHICH WE WILL CREATE MULTIPLY MOVIE CARDS.
- * WE HAVE REMOVED CONSTRUCTOR FROM 'Movie_Card' AND CREATED CONSTRUCTOR IN 'Movie_List'.
- * WE HAVE ALSO REMOVED ONCLICK HANDLERS FROM 'Movie_Card' AND CREATED HANDLERS IN 'Movie_List'.
- * WE WILL USE "PROPS" TO SEND DATA TO MOVIE CARD.
-*/
 /* PROPS
 1.Props are read-only. A component cannot change the value of its props. They can only be used for rendering information on the screen.
 2. 'this.props.count++' = this type of statement will not work and throw an error.
