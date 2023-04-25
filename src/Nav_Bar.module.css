@@ -1,0 +1,52 @@
+/* HERE WE HAVE ALL THE STYLES WE HAVE USED FOR NAV BAR */
+
+.nav {
+    width: 95vw;
+    height: 10vh;
+    background-color: rgb(129, 30, 235);
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem 0 2rem;
+    /* position: sticky; */
+}
+
+
+
+.title {
+    color: white;
+    font-size: 2rem;
+}
+
+
+
+.cartIconContainer {
+    position: relative;
+    cursor: pointer;
+}
+
+
+
+.cartImage {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+
+.cartCount {
+    position: absolute;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background-color: orange;
+    text-align: center;
+    top: -13px;
+    left: 25px;
+    /* visibility: ${(props) => props.show ? "visible" : "hidden"}; */
+
+}
+
+.cartCount :hover {
+    color: yellow
+}

@@ -15,12 +15,7 @@ code {
 
 
 
-
-
-
-
 .movie-list {
-  /* background-color: rgb(129, 30, 235); */
   display: flex;
   flex-direction: column;
   align-items: center;

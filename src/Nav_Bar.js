@@ -1,70 +1,28 @@
-import React from "react";
-import styled from "styled-components";
+// import React from "react";
+import styles from './Nav_Bar.module.css'
 
+/** we have change class component into function component as we are no longer having any 'state' here */
+function NavBar(props) {
 
-const Nav = styled.div`
-    width:            95vw;
-    height:           10vh;
-    background-color: rgb(129, 30, 235);
-    margin-bottom:    3rem;
-    display:          flex;
-    justify-content:  space-between;
-    align-items:      center;
-    padding:          0 2rem 0 2rem;
-`;
+    const { cartCount } = props;
 
-const Title = styled.div`
-    color:     white;
-    font-size: 2rem;
-`;
+    return (
 
-const CartIconContainer = styled.div`
-    position: relative;
-    cursor:   pointer;
-`;
+        <div className={styles.nav}>
 
-const CartImage = styled.img`
-    height: 2.5rem;
-    width:  2.5rem;
-`;
+            <div className={styles.title}>Movie Time</div>
 
-const CartCount = styled.div`
-    position:         absolute;
-    height:           1.5rem;
-    width:            1.5rem;
-    border-radius:    50%;
-    background-color: ${(props) => props.color};
-    text-align:       center;
-    top:              -13px;
-    left:             25px;
-    visibility:       ${(props) => props.show ? "visible" : "hidden"};
-    &:                hover{color: yellow};
-`;
+            <div className={styles.cartIconContainer}>
 
+                <img className={styles.cartImage} src="https://png.pngtree.com/png-clipart/20190920/original/pngtree-shopping-cart-convenient-icon-png-image_4637407.jpg" />
 
+                <div className={styles.cartCount} color="orange" show={true} >{cartCount}</div>
 
-class NavBar extends React.Component {
+            </div>
 
-    render() {
-        return (
-
-            <Nav>
-
-                <Title>Movie Time</Title>
-
-                <CartIconContainer>
-
-                    <CartImage src="https://png.pngtree.com/png-clipart/20190920/original/pngtree-shopping-cart-convenient-icon-png-image_4637407.jpg" />
-
-                    <CartCount color="orange" show={true} >3</CartCount>
-
-                </CartIconContainer>
-
-            </Nav>
-        )
-    }
+        </div>
+    )
 }
-
 
 
 
